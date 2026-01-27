@@ -1,0 +1,29 @@
+<div class="profile-wrapper">
+    <div class="user-profile-card">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                {{ userInfo()?.firstName?.charAt(0) }}{{ userInfo()?.lastName?.charAt(0) }}
+            </div>
+            <h2>Korisnički profil</h2>
+        </div>
+
+        <div class="profile-body">
+            <div class="info-row">
+                <span class="label">Korisničko ime</span>
+                <p class="value">@{{ userInfo()?.username }}</p>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Puno ime</span>
+                <p class="value">{{ userInfo()?.firstName }} {{ userInfo()?.lastName }}</p>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Broj telefona</span>
+                <p class="value">{{ userInfo()?.phoneNumber || 'Nije uneto' }}</p>
+            </div>
+        </div>
+
+        <button class="btn-edit">Izmeni podatke</button>
+    </div>
+</div>

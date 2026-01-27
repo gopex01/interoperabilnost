@@ -1,0 +1,60 @@
+.success-dialog-container {
+  padding: 1rem;
+  min-width: 320px;
+  text-align: center;
+}
+
+.success-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Krug oko ikonice sa animacijom */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  animation: scaleUp 0.3s ease-out;
+}
+
+.success-body h2 {
+  color: #2e7d32;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.success-body p {
+  color: #666;
+  margin: 0;
+}
+
+.success-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.success-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Mala animacija da ikonica "iskoči" */
+@keyframes scaleUp {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

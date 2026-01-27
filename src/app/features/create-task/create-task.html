@@ -1,0 +1,41 @@
+<div class="task-container">
+  <h2>Novi Zadatak</h2>
+  
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Naslov</label>
+      <input 
+        id="title" 
+        type="text" 
+        formControlName="title" 
+        placeholder="Unesite naslov zadatka..."
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="description">Opis</label>
+      <textarea 
+        id="description" 
+        formControlName="description" 
+        rows="4" 
+        placeholder="Šta treba uraditi?"
+      ></textarea>
+    </div>
+
+    <div class="date-row">
+      <div class="form-group">
+        <label for="date_from">Datum početka</label>
+        <input id="date_from" type="date" formControlName="date_from">
+      </div>
+
+      <div class="form-group">
+        <label for="date_to">Datum završetka</label>
+        <input id="date_to" type="date" formControlName="date_to">
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="taskForm.invalid" class="submit-btn">
+      Kreiraj zadatak
+    </button>
+  </form>
+</div>

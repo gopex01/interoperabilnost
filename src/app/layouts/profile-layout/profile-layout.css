@@ -1,0 +1,161 @@
+:root {
+    --bg-black: #000000;       /* Totalno crna */
+    --card-black: #0a0a0a;     /* Skoro crna za kartice */
+    --sidebar-black: #050505;  /* Najtamnija siva za sidebar */
+    --primary: #38bdf8;        /* Tirkizno plava */
+    --text-white: #ffffff;
+    --text-dim: #a3a3a3;
+    --danger: #ff4b5c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    overflow: hidden; 
+}
+
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR - ČISTO CRN */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-black);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1a1a1a; /* Suptilna ivica */
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-header {
+    padding: 30px 25px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span { color: var(--primary); }
+
+.sidebar-nav {
+    flex: 1;
+    padding: 25px 15px;
+}
+
+.nav-group small {
+    display: block;
+    color: #444; /* Tamno siva za naslove grupa */
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 14px 15px;
+    border-radius: 4px; /* Oštrije ivice za ozbiljniji look */
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+/* Hover na crnom */
+.nav-item:hover {
+    color: var(--primary);
+    border: 1px solid #222;
+    font-style:var(--text-dim);
+    transform: scale(1.13); /* Povećava element za 5% */
+    transition: transform 0.2s ease-in-out; /* Čini pokret glatkim, a ne naglim */
+}
+
+/* Aktivna opcija - Sija na crnom */
+.nav-item.active {
+    background-color:cornflowerblue;
+    color: #000000; /* Tekst na plavoj podlozi ostaje crn */
+    font-weight: 800;
+}
+.nav-item.logout{
+    color: var(--danger);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Bolje je da bude poravnato kao ostali */
+    border: 1px solid transparent;
+
+}
+.nav-item.logout:hover {
+    background-color:cornflowerblue;
+    color: #000000; /* Tekst na plavoj podlozi ostaje crn */
+    font-weight: 800;
+}
+.sidebar-footer {
+    padding: 20px 15px;
+    background-color: var(--sidebar-black); /* Dosledno crna */
+    margin-top: auto; /* Ovo gura footer na samo dno sidebara */
+}
+
+.logout {
+    color: var(--danger);
+    text-align: center;
+    justify-content: center;
+}
+
+.logout:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* GLAVNI SADRŽAJ */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    background-color: var(--bg-black);
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.user-name {
+    color: var(--primary);
+}
+
+.date-display {
+    color: #444;
+    font-weight: 700;
+}
+
+/* Kartica koja "izvire" iz mraka */
+.placeholder-card {
+    background: var(--card-black);
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    padding: 100px 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.placeholder-card p {
+    color: #555;
+    font-size: 1.1rem;
+}

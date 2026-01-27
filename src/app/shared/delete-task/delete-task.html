@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Potvrda brisanja</h2>
+
+<mat-dialog-content>
+  <p>Da li ste sigurni da želite da trajno obrišete ovaj zadatak?</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">NE</button>
+  <button mat-raised-button color="warn" (click)="onYesClick()">DA</button>
+</mat-dialog-actions>

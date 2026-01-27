@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registracija - Task Manager</title>
+    </head>
+    <body>
+        <div class="login-container">
+        <form class="login-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <h2>Registracija</h2>
+            <p>Unesite vaše podatke za registraciju</p>
+            
+            <div class="input-group">
+                <label for="username">Korisničko ime</label>
+                <input type="text" id="username" formControlName="username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Lozinka</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+            <div class="input-group">
+                <label for="username">Ime</label>
+                <input type="text" id="ime" formControlName="firstName">
+            </div>
+            <div class="input-group">
+                <label for="username">Prezime</label>
+                <input type="text" id="prezime" formControlName="lastName">
+            </div>
+            <div class="input-group">
+                <label for="username">Broj telefona</label>
+                <input type="text" id="broj-telefona" formControlName="phoneNumber">
+            </div>
+            <button type="submit" class="login-btn">Registruj se</button>
+            <a [routerLink]="['']" class="footer-links">Pocetna stranica</a>
+        </form>
+    </div>
+    </body>
+</html>

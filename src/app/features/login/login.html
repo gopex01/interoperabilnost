@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava - Task Manager</title>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2>Prijava</h2>
+            <p>Unesite vaše podatke za pristup</p>
+            
+            <div class="input-group">
+                <label for="username">Korisničko ime</label>
+                <input type="text" id="username" formControlName="username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Lozinka</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+            
+            <button type="submit" class="login-btn">Prijavi se</button>
+            
+            <div class="footer-links">
+                <a [routerLink]="['']">Pocetna stranica</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

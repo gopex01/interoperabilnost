@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>Izmeni zadatak</h2>
+
+<mat-dialog-content>
+  <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 10px;">
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Naslov</mat-label>
+      <input matInput [(ngModel)]="taskCopy().title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Opis</mat-label>
+      <textarea matInput [(ngModel)]="taskCopy().description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="taskCopy().status">
+        @for (s of statuses; track s.value) {
+          <mat-option [value]="s.value">{{ s.label }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Datum od</mat-label>
+      <input matInput [matDatepicker]="pickerFrom" [(ngModel)]="taskCopy().date_from">
+      <mat-hint>DD.MM.YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFrom></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Datum do</mat-label>
+      <input matInput [matDatepicker]="pickerTo" [(ngModel)]="taskCopy().date_to">
+      <mat-hint>DD.MM.YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="pickerTo"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTo></mat-datepicker>
+    </mat-form-field>
+
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Odustani</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Sačuvaj promene</button>
+</mat-dialog-actions>

@@ -1,0 +1,182 @@
+/* Osnovna podešavanja - Bez eksternih linkova */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #334155;
+    background-color: #f0f9ff; /* Veoma nežna plava pozadina */
+    scroll-behavior: smooth;
+    text-align: center;
+    margin-left: 30%;
+    width: 120%; /* Globalno centriranje teksta */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; /* Centriranje kontejnera na sredini ekrana */
+}
+
+/* Navigacija */
+header {
+    background: #ffffff;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0369a1; /* Nežnija tamno plava */
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #7dd3fc; /* Svetlo plava */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #475569;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0ea5e9;
+}
+
+/* Hero Sekcija */
+.hero {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: #0c4a6e;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: #64748b;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-main {
+    display: inline-block;
+    background: #0ea5e9; /* Nežna neonska plava */
+    color: #fff;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+}
+
+.btn-main:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+/* Sekcije */
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #0c4a6e;
+}
+
+/* Kartice - Centrirane u Grid-u */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center; /* Centriranje kartica u gridu */
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #e0f2fe;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #7dd3fc;
+}
+
+.card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #0369a1;
+}
+
+/* Zanimljivosti */
+.facts {
+    background: #f8fafc;
+    padding: 90px 0;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.fact-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid #7dd3fc;
+    text-align: left; /* Tekst unutar činjenica je lepši poravnat levo */
+}
+
+/* Footer */
+footer {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 50px 0;
+    border-top: 1px solid #e2e8f0;
+}

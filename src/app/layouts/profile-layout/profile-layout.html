@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Task<span>Master</span></div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <small>Glavno</small>
+                    <a [routerLink]="['/profile/home']" 
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}"
+                    class="nav-item">🏠 Početna strana</a>
+                    <a [routerLink]="['/profile/user-profile']"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" 
+                    class="nav-item">👤 Moj Profil</a>
+                </div>
+
+                <div class="nav-group">
+                    <small>Termini i Taskovi</small>
+                    <a [routerLink]="['/profile/create-task']"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}"  class="nav-item">➕ Novi termin</a>
+                    <a [routerLink]="['/profile/user-tasks']"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}"  class="nav-item">📅 Svi termini</a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a (click)="handleLogout()" class="nav-item logout">🚪 Odjavi se</a>
+            </div>
+        </aside>
+
+        <router-outlet></router-outlet>
+    </div>
+
+</body>
+</html>

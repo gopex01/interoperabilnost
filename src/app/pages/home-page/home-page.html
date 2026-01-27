@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster | Tvoj digitalni mozak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="logo">Task<span>Master</span></div>
+            <div class="nav-auth">
+                <a [routerLink]="['/login']" class="btn-login">Prijavi se</a>
+                <a [routerLink]="['/register']" class="btn-register">Otvori nalog</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-tag">Sve tvoje obaveze na jednom mestu</div>
+            <h1>Pretvori haos u <br><span class="gradient-text">čistu produktivnost.</span></h1>
+            <p>Zaboravi na izgubljene beleške. TaskMaster ti pomaže da oslobodiš um i fokusiraš se na ono što je zaista bitno za tvoj uspeh.</p>
+            <div class="hero-btns">
+                <a href="/register" class="btn-main">Započni besplatno</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="info-grid">
+        <div class="container">
+            <div class="grid-wrapper">
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Zeigarnik Efekat</h3>
+                    <p>Mozak troši ogromnu energiju na nezavršene taskove. Čim ih upišeš ovde, tvoj nivo stresa opada za 40%.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧘</div>
+                    <h3>Mentalni mir</h3>
+                    <p>Nauka kaže da zapisivanje obaveza smanjuje nivo kortizola uveče, što ti omogućava bolji i kvalitetniji san.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Dopamin Hit</h3>
+                    <p>Onaj osećaj kad štikliraš zadatak? To tvoj mozak luči dopamin. Mi smo tu da ti omogućimo taj uspeh svaki dan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="nav-container stats-wrapper">
+            <div class="stat-item">
+                <strong>+2h</strong>
+                <span>Slobodnog vremena dnevno</span>
+            </div>
+            <div class="stat-item">
+                <strong>100%</strong>
+                <span>Privatnost tvojih podataka</span>
+            </div>
+            <div class="stat-item">
+                <strong>∞</strong>
+                <span>Manje brige oko rokova</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 TaskMaster App. Napravi plan, osvoji dan.</p>
+    </footer>
+
+</body>
+</html>
