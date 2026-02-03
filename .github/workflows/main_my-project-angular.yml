@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: dist/clientr/browser
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,7 +46,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: ./ready-to-deploy
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -61,5 +60,5 @@ jobs:
         with:
           app-name: 'my-project-angular'
           slot-name: 'Production'
-          package: ./ready-to-deploy
+          package: .
           
